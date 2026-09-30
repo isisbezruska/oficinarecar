@@ -15,6 +15,9 @@ export function Services() {
         <h2 className="mt-3 max-w-xl font-display text-4xl leading-tight font-medium text-balance sm:text-5xl">
           Seu carro em boas mãos
         </h2>
+        <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted sm:text-base">
+          Cuidamos desde pequenos retoques e riscos até reparos completos após colisões.
+        </p>
 
         <div className="mt-12 grid gap-4 lg:grid-cols-2">
           {featured.map((service) => (

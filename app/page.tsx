@@ -1,6 +1,7 @@
 import { About } from "@/components/About";
 import { AutomotiveAesthetics } from "@/components/AutomotiveAesthetics";
 import { BeforeAfter } from "@/components/BeforeAfter";
+import { CustomerReviews } from "@/components/CustomerReviews";
 import { FinalCTA } from "@/components/FinalCTA";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { Footer } from "@/components/Footer";
@@ -23,6 +24,7 @@ export default function HomePage() {
         <BeforeAfter />
         <AutomotiveAesthetics />
         <Gallery />
+        <CustomerReviews />
         <HowItWorks />
         <About />
         <Location />

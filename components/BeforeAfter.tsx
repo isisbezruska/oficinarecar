@@ -1,5 +1,6 @@
+import { Fragment } from "react";
 import Image from "next/image";
-import { collisionComparisons } from "@/lib/content";
+import { collisionComparisons, restorationProcess } from "@/lib/content";
 
 export function BeforeAfter() {
   return (
@@ -19,40 +20,63 @@ export function BeforeAfter() {
         </p>
 
         <ul className="mt-12 grid gap-8 lg:grid-cols-2 lg:gap-10">
-          {collisionComparisons.map((item) => (
-            <li key={item.title} className="border border-paper/10 bg-ink-soft p-3 sm:p-4">
-              <h3 className="px-1 pb-4 font-display text-2xl font-medium">{item.title}</h3>
-              <div className="grid grid-cols-2 gap-2 sm:gap-3">
-                <figure>
-                  <div className="relative aspect-[9/16] overflow-hidden bg-panel">
+          {collisionComparisons.map((item, index) => (
+            <Fragment key={item.title}>
+              {index === collisionComparisons.length - 1 ? (
+                <li className="border border-paper/10 bg-ink-soft p-3 sm:p-4">
+                  <h3 className="px-1 pb-2 font-display text-2xl font-medium">
+                    Da preparação ao acabamento final
+                  </h3>
+                  <p className="px-1 pb-4 text-sm leading-relaxed text-paper/70">
+                    Um exemplo completo das etapas de preparação da lataria e pintura.
+                  </p>
+                  <div className="overflow-hidden bg-panel">
                     <Image
-                      src={item.before.src}
-                      alt={item.before.alt}
-                      fill
-                      sizes="(min-width: 1024px) 25vw, 50vw"
-                      className="object-cover"
+                      src={restorationProcess.src}
+                      alt={restorationProcess.alt}
+                      width={restorationProcess.width}
+                      height={restorationProcess.height}
+                      sizes="(min-width: 1024px) 50vw, 100vw"
+                      className="h-auto w-full"
                     />
-                    <span className="absolute bottom-3 left-3 bg-ink/85 px-3 py-1.5 text-xs font-semibold tracking-[0.14em] uppercase">
-                      Antes
-                    </span>
                   </div>
-                </figure>
-                <figure>
-                  <div className="relative aspect-[9/16] overflow-hidden bg-panel">
-                  <Image
-                      src={item.after.src}
-                      alt={item.after.alt}
-                      fill
-                      sizes="(min-width: 1024px) 25vw, 50vw"
-                      className="object-cover"
-                  />
-                    <span className="absolute bottom-3 left-3 bg-gold px-3 py-1.5 text-xs font-semibold tracking-[0.14em] text-ink uppercase">
-                      Depois
-                    </span>
-                  </div>
-                </figure>
-              </div>
-            </li>
+                </li>
+              ) : null}
+
+              <li className="border border-paper/10 bg-ink-soft p-3 sm:p-4">
+                <h3 className="px-1 pb-4 font-display text-2xl font-medium">{item.title}</h3>
+                <div className="grid grid-cols-2 gap-2 sm:gap-3">
+                  <figure>
+                    <div className="relative aspect-[9/16] overflow-hidden bg-panel">
+                      <Image
+                        src={item.before.src}
+                        alt={item.before.alt}
+                        fill
+                        sizes="(min-width: 1024px) 25vw, 50vw"
+                        className="object-cover"
+                      />
+                      <span className="absolute bottom-3 left-3 bg-ink/85 px-3 py-1.5 text-xs font-semibold tracking-[0.14em] uppercase">
+                        Antes
+                      </span>
+                    </div>
+                  </figure>
+                  <figure>
+                    <div className="relative aspect-[9/16] overflow-hidden bg-panel">
+                      <Image
+                        src={item.after.src}
+                        alt={item.after.alt}
+                        fill
+                        sizes="(min-width: 1024px) 25vw, 50vw"
+                        className="object-cover"
+                      />
+                      <span className="absolute bottom-3 left-3 bg-gold px-3 py-1.5 text-xs font-semibold tracking-[0.14em] text-ink uppercase">
+                        Depois
+                      </span>
+                    </div>
+                  </figure>
+                </div>
+              </li>
+            </Fragment>
           ))}
         </ul>
       </div>

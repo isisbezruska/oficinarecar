@@ -53,25 +53,25 @@ export const services = [
   {
     title: "Funilaria e reparo de colisão",
     description:
-      "Recuperação de veículos batidos, com reparo de portas, capô, laterais, pinos e soldas.",
+      "De pequenos retoques a veículos batidos: reparos em portas, capô, laterais, pinos e soldas.",
     featured: true,
     image: {
-      src: "/images/antes-cruze-frente.jpg",
-      alt: "Chevrolet Cruze com danos de colisão na dianteira antes do reparo",
-      width: 575,
-      height: 1024,
+      src: "/images/entrega-toyota-corolla-branco.webp",
+      alt: "Toyota Corolla branco pronto após serviço de funilaria e pintura na RECAR",
+      width: 640,
+      height: 640,
     },
   },
   {
     title: "Pintura automotiva",
     description:
-      "Repintura e acerto de cor, em pinturas comuns e especiais. Parceria com a Tropical Tintas há mais de vinte anos.",
+      "Repintura, pequenos retoques e acerto de cor em pinturas comuns e especiais.",
     featured: true,
     image: {
-      src: "/images/depois-cruze-frente.jpg",
-      alt: "Chevrolet Cruze com a funilaria e a pintura refeitas após o reparo",
-      width: 575,
-      height: 1024,
+      src: "/images/entrega-bmw-preto.webp",
+      alt: "BMW preto com pintura brilhante pronto na RECAR",
+      width: 640,
+      height: 640,
     },
   },
   {
@@ -81,8 +81,8 @@ export const services = [
     featured: false,
   },
   {
-    title: "Recuperação de rodas",
-    description: "Reparo e renovação do acabamento de rodas, inclusive superfícies diamantadas.",
+    title: "Pintura de roda diamantada",
+    description: "Reparo e renovação da pintura e do acabamento de rodas diamantadas.",
     featured: false,
   },
   {
@@ -153,6 +153,36 @@ export const collisionComparisons: Comparison[] = [
     },
   },
   {
+    title: "Recuperação completa após colisão",
+    before: {
+      src: "/images/antes-kwid.jpg",
+      alt: "Renault Kwid bastante danificado na dianteira antes do reparo",
+      width: 575,
+      height: 1024,
+    },
+    after: {
+      src: "/images/depois-kwid.jpg",
+      alt: "Renault Kwid recuperado e pronto depois do reparo",
+      width: 575,
+      height: 1024,
+    },
+  },
+  {
+    title: "Reparo lateral após colisão",
+    before: {
+      src: "/images/antes-civic.jpg",
+      alt: "Honda Civic com danos na lateral e no paralama antes do reparo",
+      width: 575,
+      height: 1024,
+    },
+    after: {
+      src: "/images/depois-civic.jpg",
+      alt: "Lateral do Honda Civic recuperada depois do reparo e da pintura",
+      width: 575,
+      height: 1024,
+    },
+  },
+  {
     title: "Reparo localizado de lataria",
     before: {
       src: "/images/antes-audi.jpg",
@@ -168,7 +198,7 @@ export const collisionComparisons: Comparison[] = [
     },
   },
   {
-    title: "Recuperação de roda diamantada",
+    title: "Pintura de roda diamantada",
     before: {
       src: "/images/antes-roda.jpg",
       alt: "Roda diamantada Volkswagen com marcas antes da recuperação",
@@ -183,6 +213,29 @@ export const collisionComparisons: Comparison[] = [
     },
   },
 ];
+
+export const restorationProcess: Photo = {
+  src: "/images/antes-depois-kombi-amarela.webp",
+  alt: "Quatro etapas do trabalho em uma Kombi: lataria original, preparação da carroceria, aplicação do primer e pintura final em amarelo e branco",
+  width: 1600,
+  height: 1600,
+};
+
+export const plasticRestoration: Comparison = {
+  title: "Revitalização de plásticos externos",
+  before: {
+    src: "/images/antes-revitalizacao-plastico.webp",
+    alt: "Para-choque com o plástico desgastado antes da revitalização",
+    width: 575,
+    height: 1024,
+  },
+  after: {
+    src: "/images/depois-revitalizacao-plastico.webp",
+    alt: "Para-choque com o plástico renovado depois da revitalização",
+    width: 575,
+    height: 1024,
+  },
+};
 
 export const aestheticPhotos: Array<Photo & { title: string }> = [
   {
@@ -233,6 +286,52 @@ export const aestheticPhotos: Array<Photo & { title: string }> = [
     width: 575,
     height: 1024,
     title: "Polimento técnico",
+  },
+  {
+    src: "/images/polimento-comparativo.jpg",
+    alt: "Pintura comparada antes e depois do polimento",
+    width: 575,
+    height: 1024,
+    title: "Polimento — antes e depois",
+  },
+];
+
+export const customerReviews: Photo[] = [
+  {
+    src: "/images/avaliacoes/ageu-neris.jpg",
+    alt: "Avaliação cinco estrelas de Ageu Neris: Ótimo atendimento e qualidade fenomenal",
+    width: 575,
+    height: 280,
+  },
+  {
+    src: "/images/avaliacoes/matheus-andrade.jpg",
+    alt: "Avaliação cinco estrelas de Matheus Andrade elogiando o talento, o capricho e a qualidade do serviço",
+    width: 575,
+    height: 330,
+  },
+  {
+    src: "/images/avaliacoes/bruno-leonardi.jpg",
+    alt: "Avaliação cinco estrelas de Bruno Leonardi elogiando a qualidade, o profissionalismo e a rapidez",
+    width: 575,
+    height: 310,
+  },
+  {
+    src: "/images/avaliacoes/pedro-guedes.jpg",
+    alt: "Avaliação cinco estrelas de Pedro Guedes recomendando a RECAR para reparos automotivos em Curitiba",
+    width: 575,
+    height: 400,
+  },
+  {
+    src: "/images/avaliacoes/paschoal-pucci.jpg",
+    alt: "Avaliação cinco estrelas de Paschoal Pucci elogiando atendimento, profissionalismo, capricho e preço justo",
+    width: 575,
+    height: 320,
+  },
+  {
+    src: "/images/avaliacoes/rodrigo-sc.jpg",
+    alt: "Avaliação cinco estrelas de Rodrigo S C elogiando o serviço perfeito e a atenção aos detalhes",
+    width: 575,
+    height: 400,
   },
 ];
 
