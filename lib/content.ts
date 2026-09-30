@@ -51,15 +51,15 @@ export const trustItems = [
 
 export const services = [
   {
-    title: "Funilaria",
+    title: "Funilaria e reparo de colisão",
     description:
-      "Batidas, portas, capô, pinos e soldas, com avaliação técnica para um reparo cuidadoso.",
+      "Recuperação de veículos batidos, com reparo de portas, capô, laterais, pinos e soldas.",
     featured: true,
     image: {
-      src: "/images/fusca-preto-restaurado.webp",
-      alt: "Fusca preto com a lataria e a pintura refeitas, fotografado ao lado de outros Fuscas",
-      width: 1280,
-      height: 1122,
+      src: "/images/antes-cruze-frente.jpg",
+      alt: "Chevrolet Cruze com danos de colisão na dianteira antes do reparo",
+      width: 575,
+      height: 1024,
     },
   },
   {
@@ -68,10 +68,10 @@ export const services = [
       "Repintura e acerto de cor, em pinturas comuns e especiais. Parceria com a Tropical Tintas há mais de vinte anos.",
     featured: true,
     image: {
-      src: "/images/classico-azul-paralama.webp",
-      alt: "Paralama dianteiro de um carro clássico com a pintura azul refeita e o friso lateral cromado",
-      width: 960,
-      height: 717,
+      src: "/images/depois-cruze-frente.jpg",
+      alt: "Chevrolet Cruze com a funilaria e a pintura refeitas após o reparo",
+      width: 575,
+      height: 1024,
     },
   },
   {
@@ -81,8 +81,8 @@ export const services = [
     featured: false,
   },
   {
-    title: "Restauração automotiva",
-    description: "Restauração de veículos e de carros antigos.",
+    title: "Recuperação de rodas",
+    description: "Reparo e renovação do acabamento de rodas, inclusive superfícies diamantadas.",
     featured: false,
   },
   {
@@ -99,26 +99,140 @@ export const services = [
   },
 ] as const;
 
-/**
- * As duas únicas imagens do site antigo em que o antes e o depois aparecem juntos,
- * montados pela própria oficina. Não monte pares novos a partir de fotos soltas —
- * não há como saber se são do mesmo veículo.
- */
-export const beforeAfter: Array<Photo & { caption: string }> = [
+export type Comparison = {
+  title: string;
+  before: Photo;
+  after: Photo;
+};
+
+/** Comparativos identificados de serviços executados pela própria oficina. */
+export const collisionComparisons: Comparison[] = [
   {
-    src: "/images/antes-depois-kombi-amarela.webp",
-    alt: "Quatro etapas da restauração de uma Kombi: a lataria bege original, a carroceria lixada, o primer cinza e a pintura final em amarelo e branco",
-    width: 1600,
-    height: 1600,
-    caption:
-      "Kombi refeita da lataria à pintura: chapa recuperada, primer e o acabamento final em amarelo e branco.",
+    title: "Recuperação dianteira após colisão",
+    before: {
+      src: "/images/antes-cruze-frente.jpg",
+      alt: "Dianteira de um Chevrolet Cruze bastante danificada antes do reparo",
+      width: 575,
+      height: 1024,
+    },
+    after: {
+      src: "/images/depois-cruze-frente.jpg",
+      alt: "Chevrolet Cruze visto pela dianteira depois da recuperação",
+      width: 575,
+      height: 1024,
+    },
   },
   {
-    src: "/images/antes-depois-kombi-bege.webp",
-    alt: "Comparação de uma Kombi antes e depois: embaixo, a pintura bege desgastada; em cima, a Kombi pronta em amarelo e branco",
-    width: 900,
-    height: 900,
-    caption: "A mesma Kombi antes do reparo e depois de pronta.",
+    title: "Recuperação traseira e lateral",
+    before: {
+      src: "/images/antes-cruze-traseira.jpg",
+      alt: "Traseira e lateral de um Chevrolet Cruze danificadas antes do reparo",
+      width: 575,
+      height: 1024,
+    },
+    after: {
+      src: "/images/depois-cruze-traseira.jpg",
+      alt: "Chevrolet Cruze visto pela traseira depois da recuperação",
+      width: 575,
+      height: 1024,
+    },
+  },
+  {
+    title: "Funilaria e pintura",
+    before: {
+      src: "/images/antes-gol.jpg",
+      alt: "Paralama dianteiro de um Volkswagen Gol amassado antes do reparo",
+      width: 575,
+      height: 1024,
+    },
+    after: {
+      src: "/images/depois-gol.jpg",
+      alt: "Volkswagen Gol com o paralama recuperado e a pintura finalizada",
+      width: 575,
+      height: 1024,
+    },
+  },
+  {
+    title: "Reparo localizado de lataria",
+    before: {
+      src: "/images/antes-audi.jpg",
+      alt: "Traseira de um Audi com amassado próximo à lanterna antes do reparo",
+      width: 575,
+      height: 1024,
+    },
+    after: {
+      src: "/images/depois-audi.jpg",
+      alt: "Traseira do Audi recuperada e com o acabamento finalizado",
+      width: 575,
+      height: 1024,
+    },
+  },
+  {
+    title: "Recuperação de roda diamantada",
+    before: {
+      src: "/images/antes-roda.jpg",
+      alt: "Roda diamantada Volkswagen com marcas antes da recuperação",
+      width: 575,
+      height: 1024,
+    },
+    after: {
+      src: "/images/depois-roda.jpg",
+      alt: "Roda Volkswagen depois da recuperação e renovação do acabamento",
+      width: 575,
+      height: 1024,
+    },
+  },
+];
+
+export const aestheticPhotos: Array<Photo & { title: string }> = [
+  {
+    src: "/images/antes-farol.jpg",
+    alt: "Farol opaco antes do processo de restauração",
+    width: 575,
+    height: 1024,
+    title: "Restauração de faróis — antes",
+  },
+  {
+    src: "/images/depois-farol.jpg",
+    alt: "Farol transparente depois do processo de restauração",
+    width: 575,
+    height: 1024,
+    title: "Restauração de faróis — depois",
+  },
+  {
+    src: "/images/antes-depois-bancos-tecido.jpg",
+    alt: "Comparativo de bancos de tecido antes e depois da higienização",
+    width: 575,
+    height: 1024,
+    title: "Higienização de bancos de tecido",
+  },
+  {
+    src: "/images/antes-depois-banco-couro.jpg",
+    alt: "Banco de couro comparado antes e depois da limpeza",
+    width: 575,
+    height: 1024,
+    title: "Limpeza de banco de couro",
+  },
+  {
+    src: "/images/antes-depois-cromado.jpg",
+    alt: "Peça cromada antes e depois da remoção de oxidação",
+    width: 575,
+    height: 1024,
+    title: "Recuperação de cromados",
+  },
+  {
+    src: "/images/antes-depois-plasticos.jpg",
+    alt: "Plástico interno comparado antes e depois da revitalização",
+    width: 575,
+    height: 1024,
+    title: "Revitalização de plásticos internos",
+  },
+  {
+    src: "/images/antes-depois-polimento.webp",
+    alt: "Pintura branca comparada antes e depois do polimento técnico",
+    width: 575,
+    height: 1024,
+    title: "Polimento técnico",
   },
 ];
 
@@ -177,12 +291,6 @@ export const deliveredPhotos: Photo[] = [
     height: 640,
   },
   {
-    src: "/images/entrega-fusca-azul.webp",
-    alt: "Fusca azul restaurado, com para-choques cromados e faróis auxiliares, pronto na oficina",
-    width: 640,
-    height: 640,
-  },
-  {
     src: "/images/entrega-perua-preta.webp",
     alt: "Perua preta com rack de teto, pronta para a entrega",
     width: 640,
@@ -193,58 +301,6 @@ export const deliveredPhotos: Photo[] = [
     alt: "Sedã Fiat preto com a pintura espelhada e rodas de liga, pronto para a entrega",
     width: 640,
     height: 640,
-  },
-];
-
-/** Demais trabalhos da oficina, sem pares de antes e depois identificáveis. */
-export const workPhotos: Photo[] = [
-  {
-    src: "/images/kombi-amarela-restaurada.webp",
-    alt: "Kombi amarela e branca restaurada, estacionada ao lado de uma perua vermelha",
-    width: 1280,
-    height: 853,
-  },
-  {
-    src: "/images/pintura-preta-reflexo-placa.webp",
-    alt: "Placa da RECAR refletida na pintura preta espelhada de um carro recém-polido",
-    width: 960,
-    height: 720,
-  },
-  {
-    src: "/images/ford-f100-lateral.webp",
-    alt: "Lateral de uma picape Ford F-100 azul restaurada, com o emblema do modelo no paralama",
-    width: 750,
-    height: 1000,
-  },
-  {
-    src: "/images/mustang-verde-restaurado.webp",
-    alt: "Frente de um Ford Mustang verde escuro restaurado, com os faróis e a grade recuperados",
-    width: 800,
-    height: 600,
-  },
-  {
-    src: "/images/chevrolet-vermelho-restaurado.webp",
-    alt: "Chevrolet vermelho restaurado estacionado ao lado de um Mustang preto, em frente a uma parede laranja",
-    width: 800,
-    height: 600,
-  },
-  {
-    src: "/images/ford-f100-frente.webp",
-    alt: "Frente de uma picape Ford F-100 azul e branca restaurada, com o para-choque e a grade cromados",
-    width: 750,
-    height: 1000,
-  },
-  {
-    src: "/images/fusca-bege-traseira.webp",
-    alt: "Traseira de um Fusca bege rebaixado, com a pintura polida e roda esportiva",
-    width: 720,
-    height: 1280,
-  },
-  {
-    src: "/images/moto-tanque-polido.webp",
-    alt: "Tanque de uma moto preta com a pintura espelhada, refletindo o céu e as nuvens",
-    width: 704,
-    height: 960,
   },
 ];
 
@@ -263,5 +319,5 @@ export const steps = [
   },
 ] as const;
 
-/** Tudo o que entra na galeria, dos carros mais recentes aos restaurados. */
-export const galleryPhotos: Photo[] = [...deliveredPhotos, ...workPhotos];
+/** Veículos recentes prontos para a entrega. */
+export const galleryPhotos: Photo[] = deliveredPhotos;

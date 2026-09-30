@@ -25,10 +25,9 @@ export function About() {
           <div className="mt-6 space-y-4 text-base leading-relaxed text-ink/80">
             <p>
               Desde {site.sinceYear}, a RECAR está em Curitiba, no bairro São Braz, na
-              reparação e na restauração automotiva. O trabalho prioriza o
-              profissionalismo e a qualidade — de veículos batidos e riscos na pintura
-              ao martelinho de ouro, restauração, espelhamento, cristalização e
-              vitrificação.
+              reparação automotiva. O trabalho prioriza o profissionalismo e a
+              qualidade — de veículos batidos e riscos na pintura ao martelinho de
+              ouro, polimento, higienização, cristalização e vitrificação.
             </p>
             <p>
               A oficina conta com profissionais especializados e com experiência no

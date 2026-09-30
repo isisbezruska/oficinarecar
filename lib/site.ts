@@ -58,6 +58,7 @@ export const socialPreviewImage = "/images/recar-fachada-sao-braz.webp";
 export const nav = [
   { href: "#servicos", label: "Serviços" },
   { href: "#trabalhos", label: "Antes e Depois" },
+  { href: "#estetica", label: "Estética" },
   { href: "#sobre", label: "Sobre" },
   { href: "#localizacao", label: "Localização" },
   { href: "#contato", label: "Contato" },

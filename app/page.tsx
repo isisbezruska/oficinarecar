@@ -1,4 +1,5 @@
 import { About } from "@/components/About";
+import { AutomotiveAesthetics } from "@/components/AutomotiveAesthetics";
 import { BeforeAfter } from "@/components/BeforeAfter";
 import { FinalCTA } from "@/components/FinalCTA";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
@@ -20,6 +21,7 @@ export default function HomePage() {
         <TrustBar />
         <Services />
         <BeforeAfter />
+        <AutomotiveAesthetics />
         <Gallery />
         <HowItWorks />
         <About />

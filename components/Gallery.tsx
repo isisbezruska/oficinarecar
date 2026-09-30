@@ -78,11 +78,11 @@ export function Gallery() {
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
             <h2 className="max-w-xl font-display text-3xl leading-tight font-medium text-balance sm:text-4xl">
-              Outros trabalhos realizados
+              Veículos prontos para a entrega
             </h2>
             <p className="mt-4 max-w-lg text-sm leading-relaxed text-paper/70 sm:text-base">
-              Carros prontos para a entrega e trabalhos de funilaria, pintura,
-              polimento e restauração, fotografados na própria oficina.
+              Resultados recentes de funilaria, pintura e polimento realizados pela
+              equipe da RECAR.
             </p>
           </div>
           <div className="hidden gap-2 sm:flex">
