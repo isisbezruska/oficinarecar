@@ -27,12 +27,12 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-4 sm:h-[4.5rem] sm:px-6">
         <a href="#topo" className="shrink-0" aria-label="RECAR, início da página">
           <Image
-            src="/images/recar-logo.png"
+            src="/images/recar-logo-new.png"
             alt=""
-            width={430}
-            height={219}
+            width={897}
+            height={159}
             priority
-            className="h-12 w-auto sm:h-14"
+            className="h-auto w-36 sm:w-44"
           />
         </a>
 

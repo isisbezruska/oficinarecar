@@ -15,11 +15,11 @@ export function Footer() {
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:px-6 md:grid-cols-[1.3fr_1fr_1fr]">
         <div>
           <Image
-            src="/images/recar-logo.png"
+            src="/images/recar-logo-new.png"
             alt={site.name}
-            width={430}
-            height={219}
-            className="h-14 w-auto"
+            width={897}
+            height={159}
+            className="h-auto w-56"
           />
           <p className="mt-4 text-sm text-paper/75">{site.name}</p>
           <p className="text-sm text-paper/75">
